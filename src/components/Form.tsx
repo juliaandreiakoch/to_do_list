@@ -15,8 +15,8 @@ export const Form: React.FC<{addTaskToList: ({id, taskDescription}: {id:number, 
   return (
     <div>
       <form onSubmit={handleAddTask}>
-        <input type="text" value={newTask} onChange={(e) => setNewTask(e.target.value)} placeholder="Add a new task"/>
-        <input type="submit" />
+        <input type="text" value={newTask} onChange={(e) => setNewTask(e.target.value)} placeholder="Type here your new item"/>
+        <input type="submit" value="Add"/>
       </form>
     </div>
   );
