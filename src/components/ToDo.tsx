@@ -8,8 +8,10 @@ export const ToDo: React.FC = () => {
   const [tasks, setTasks] = useState<{id: number, taskDescription: string, isEditig: boolean}[]>([]);
 
   const addTaskToList = ({id, taskDescription}: {id: number, taskDescription: string}) => {
-      setTasks([...tasks, {id: id, taskDescription: taskDescription, isEditig: false}])
-    };
+      if(taskDescription) {
+        setTasks([...tasks, {id: id, taskDescription: taskDescription, isEditig: false}])
+      }
+  };
   const deleteItems = (idToBeDeleted: number) => {
     setTasks(tasks.filter((task) => task.id !== idToBeDeleted))
   }
