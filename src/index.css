@@ -1,11 +1,12 @@
 body {
-  margin: 0;
+  background-image: url(https://img.freepik.com/fotos-gratis/apartamento-leigos-do-conceito-de-negocio_53876-64851.jpg?t=st=1713493374~exp=1713496974~hmac=7e6b31332966f80f85dcb09590b3bf42014c4658de6cb76e26edd7ac9952a310&w=1480);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #032c3d;
 }
 
 code {
@@ -15,7 +16,7 @@ code {
 
 h1 {
   text-align: center;
-  color: #d4f1f4;
+  color: #0a0d11;
 }
 
 ul {
@@ -40,6 +41,7 @@ input[type="submit"] {
   border-color: #303f52;
   font-style: oblique;
   visibility: visible;
+  margin-left: 5px;
 }
 
 input:hover {
@@ -51,9 +53,9 @@ input:hover {
   background-color: #0a0d11;
   display: flex; 
   flex-direction: column;
+  margin: auto;
   height: 80vh; 
-  width: 30%;
-  margin: 0 auto;
+  width: 35%;
   border-radius: 10px;
 }
 
@@ -70,6 +72,7 @@ li {
   justify-content: space-between; 
   align-items: start;
   margin-top: 10px;
+  margin-left: -20px;
 }
 
 li button {
@@ -81,5 +84,5 @@ li button {
 
 .two-buttons{
   display: flex;
- 
+  margin-right: 10px;
 }
