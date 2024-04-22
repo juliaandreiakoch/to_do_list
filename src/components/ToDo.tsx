@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Form } from "./Form";
 import '../index.css';
-import { EditInput } from "./EditInput";
 import { FaTrashAlt, FaEdit } from 'react-icons/fa';
+import { Dropdown } from 'react-bootstrap';
+
+interface editTaskType{id:number, taskDescription:string, isEditig:boolean};
 
 export const ToDo: React.FC = () => {
   const [tasks, setTasks] = useState<{id: number, taskDescription: string, isEditig: boolean}[]>([]);
@@ -39,13 +41,18 @@ const editTask = (currentTask: {id:number, taskDescription:string, isEditig:bool
           {tasks.map((task, index) => (
             <li key={index}>
               <div className="checkbox-input">
-              <input type="checkbox"/>{task.taskDescription} 
-              <EditInput editItems={editItems} id={task.id} isEditing={task.isEditig}/>
+                <input type="checkbox" className="checkboxItem"/>{task.taskDescription} 
               </div>
-              <div className="two-buttons">
-              <button onClick={() => deleteItems(task.id)}> <FaTrashAlt/> </button>
-              <button onClick={() => editTask(task)}> <FaEdit/> </button>
-              </div>
+              <Dropdown>
+              <Dropdown.Toggle className="expandButton" variant="primary" id="dropdown-basic">
+                ...
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                <Dropdown.Item onClick={() => {editItems({idToBeEdited: task.id, newText: task.taskDescription})}}> <FaEdit/> Edit</Dropdown.Item>
+                <Dropdown.Item onClick={() => {deleteItems(task.id)}}> <FaTrashAlt/> Delete</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
             </li> 
           ))}
         </ul>

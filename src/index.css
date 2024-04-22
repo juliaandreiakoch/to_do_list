@@ -7,6 +7,9 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
 }
 
 code {
@@ -24,7 +27,7 @@ ul {
 }
 
 input {
-  padding-top: 5px;
+  margin-top: 5px;
 }
 
 input[type="text"] {
@@ -49,13 +52,12 @@ input:hover {
 }
 
 .add-task {
-  padding: 5px;
   background-color: #0a0d11;
   display: flex; 
   flex-direction: column;
-  margin: auto;
-  height: 80vh; 
-  width: 35%;
+  min-height: 500px;
+  height: auto; 
+  width: 400px;
   border-radius: 10px;
 }
 
@@ -70,19 +72,40 @@ li {
   font-family: 'Courier New', Courier, monospace;
   display: flex;
   justify-content: space-between; 
-  align-items: start;
   margin-top: 10px;
   margin-left: -20px;
+  margin-right: 10px;
 }
 
-li button {
-  margin-left: 5px; 
-  margin-top: 5px;
-  background-color: #303f52;
-  color: white;
+.checkboxItem {
+  margin-right: 5px;
+  vertical-align: middle;
+  margin-bottom: 6px;
 }
 
 .two-buttons{
   display: flex;
-  margin-right: 10px;
+  align-items: space-between;
+  justify-content: space-between;
+  width: 65px;
+}
+
+.popover{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+}
+
+.expandButton{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(78, 74, 74);
+  border: none;
+  font-size: small;
+  height: 25px;
+  width: 40px;
+  padding-bottom: 10px;
+  margin-right: 8px;
 }
