@@ -47,6 +47,15 @@ input[type="submit"] {
   margin-left: 5px;
 }
 
+.editTask {
+  width: 300px;
+}
+
+input[type="submit"][value="Confirm"] {
+  font-size: small; 
+  margin-bottom: 5px;
+}
+
 input:hover {
   background-color: #252e3b;
 }
@@ -64,6 +73,15 @@ input:hover {
 .form {
   display: flex;
   justify-content: center;
+  margin-bottom: 10px;  
+}
+
+.formEditInput {
+  display: flex; 
+  width:  380px;        
+  align-items: flex-start; 
+  justify-content: space-between;                   
+  border-radius: 5px;     
 }
 
 li {
@@ -83,20 +101,6 @@ li {
   margin-bottom: 6px;
 }
 
-.two-buttons{
-  display: flex;
-  align-items: space-between;
-  justify-content: space-between;
-  width: 65px;
-}
-
-.popover{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100px;
-}
-
 .expandButton{
   display: flex;
   align-items: center;
@@ -109,3 +113,12 @@ li {
   padding-bottom: 10px;
   margin-right: 8px;
 }
+
+.deleteAllItems {
+  color: rgb(104, 103, 103);
+  background-color: transparent;
+  border-color: #303f52;
+  visibility: visible;
+  margin-left: 5px;
+}
+

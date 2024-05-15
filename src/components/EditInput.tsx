@@ -14,16 +14,17 @@ export const EditInput: React.FC<{
   };
 
   return (
-    <div>
+    <div className="formEditInput">
       {(isEditing) ? (
         <form onSubmit={handleEditTask}>
-          <input
+          <input 
             type="text"
+            className="editTask"
             value={newText}
             onChange={(e) => setNewText(e.target.value)}
             placeholder="Edit task"
           />
-          <input type="submit" />
+          <input type="submit" value="Confirm"/>
         </form>
       ): ""}
     </div>
